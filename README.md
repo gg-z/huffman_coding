@@ -5,8 +5,7 @@ Python implementation of Huffman coding .
 - decompression: python main.py 1 test.cps test_rec.txt  
 
 
-### author
-if the code presented helps u, it literally is a delight to me.  
+*If the code presented helps u,could u please give me a star.*  
 
 
 
