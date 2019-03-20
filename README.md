@@ -1,6 +1,4 @@
-### Python implementation of Huffman coding . 
-
-### run
+### Running Command
 - compression: python main.py 0 test.txt test.cps   
 - decompression: python main.py 1 test.cps test_rec.txt  
 - **If the code presented helps u, could u please give me a star.**
@@ -22,6 +20,7 @@
 > **哈夫曼**[^1]编码(Huffman Coding)，又称霍夫曼编码，是一种编码方式，哈夫曼编码是可变[字长](http://baike.baidu.com/view/731.htm)编码(VLC)的一种。Huffman于1952年提出一种编码方法，该方法完全依据[字符][^2]出现概率来构造异字头的平均长度最短的码字，有时称之为最佳编码，一般就叫做Huffman编码（有时也称为霍夫曼编码）
 
 如上，Huffman编码就是一种效率很高的编码方式，在理解Huffman编码之前，我们先来了解一下下面两种编码方式：
+<br>
 **1.定长编码方式**<br>
 
 例如ASCII码，8-bit定长编码，使用8位(一个字节)代表一个字符，比如tea就一定得需要 3x8 = 24位去表示该自字符串，一个含有n个字符的字符串就得需要 nx8 位去表示该字符串;
@@ -38,10 +37,11 @@
 
 对于上面的例子，使用**前缀码**的意思就是 **e** 不能用0去表示，应为 0是 **t**对应的编码  **01** 的前缀，如果我们使用 **001** 去表示**e**，**1** 表示 **a**，**01**表示**t**，那么 **tea**就被编码成为 **010011**，并且在解析的时候，我们就只能解析成为 **tea**。
 
-###### **Huffman编码就是一种能够使用最短的位数来编码被编码文件的前缀码**
+**Huffman编码就是一种能够使用最短的位数来编码被编码文件的前缀码**
 <br>
 <br>
-**如何构造这样的前缀码？**
+
+**如何构造这样的前缀码?**
 
 #### 二、借助Huffman树创建Huffman编码
 <br>
